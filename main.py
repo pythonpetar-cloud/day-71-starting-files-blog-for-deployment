@@ -11,9 +11,7 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
-from dotenv import load_dotenv
-load_dotenv()
-import smtplib
+# import smtplib
 
 # Optional: add contact me email functionality (Day 60)
 # import smtplib
@@ -284,7 +282,7 @@ def contact():
 
 
 # Optional: You can include the email sending code from Day 60:
-# DON'T put your email and password here directly! The code will be visible when you upload to Github.
+# DON'T put your email and password here directly! The code will be visible when you upload to GitHub.
 # Use environment variables instead (Day 35)
 
 # MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
