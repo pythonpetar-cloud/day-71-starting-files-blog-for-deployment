@@ -11,6 +11,8 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import smtplib
 
 # Optional: add contact me email functionality (Day 60)
@@ -31,9 +33,10 @@ This will install the packages from the requirements.txt for this project.
 '''
 
 app = Flask(__name__)
-app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
+print(app.config['SECRET_KEY'])
 
 # Configure Flask-Login
 login_manager = LoginManager()
