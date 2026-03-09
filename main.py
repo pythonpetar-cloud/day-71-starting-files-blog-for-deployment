@@ -11,7 +11,7 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
-# import smtplib
+
 
 # Optional: add contact me email functionality (Day 60)
 # import smtplib
